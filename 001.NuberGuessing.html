@@ -6,11 +6,11 @@
 	</head>
 	<body>
 		<div id="app">
-			请输入你猜想的数字:{{shu}}
+			请输入你猜想的数字:
+			<input type="text" v-model="shu" />
 			<p v-if="shu>50">你输入的数字太大了</p>
 			<p v-if="shu==50">恭喜你，答对了</p>
 			<p v-if="shu<50">你输入的数字太小了</p>
-			<input type="text" v-model="shu" />
 		</div>
 		
 		<script src="js/vue.js" type="text/javascript" charset="UTF-8"></script>
@@ -18,7 +18,7 @@
 			let v=new Vue({
 				el:'#app',
 				data:{
-					shu:25
+					shu:0
 				}
 			})
 		</script>
