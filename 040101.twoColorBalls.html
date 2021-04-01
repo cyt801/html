@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style></style>
+<body>
+    <div>
+        <ul>
+            <li style="width:160px;color:red;"></li>
+            <li style="width:20px;color:blue;"></li>
+        </ul>
+        <p>
+            <button onclick="x()">随机选号</button>
+            <button onclick="y()">只选红球</button>
+            <button onclick="z()">只选蓝球</button>
+        </p>
+    </div>
+</body>
+<script>
+    var arr = new Array;
+    var liObj=document.getElementsByTagName('li')
+    function x(){
+        num()
+        for(var i=0;i<arr.length;i++){ 
+            if (arr[i]!=arr[i+1]){
+                liObj[0].innerHTML=''+arr[0]+' '+arr[1]+' '+arr[2]+' '+arr[3]+' '+arr[4]+' '+arr[5];
+                liObj[1].innerHTML=g;
+            }else{
+                x();
+            }
+        }
+    }
+    function y(){
+        num()
+        for(var i=0;i<arr.length;i++){ 
+            if (arr[i]!=arr[i+1]){
+                liObj[0].innerHTML=''+arr[0]+' '+arr[1]+' '+arr[2]+' '+arr[3]+' '+arr[4]+' '+arr[5];
+                liObj[1].innerHTML='';
+            }else{
+                y();
+            }
+        }
+    }
+    function z(){
+        var g = Math.floor(Math.random()*16+1);
+        liObj[0].innerHTML='';
+        liObj[1].innerHTML=g;
+    }
+    function num(){
+        for(var s=0;s<6;s++){
+            arr[s]=Math.floor(Math.random()*33+1);
+        };
+        g = Math.floor(Math.random()*16+1);
+        function sortNumber(a,b){
+            return a - b
+        }
+        arr=arr.sort(sortNumber);
+    };
+</script>
+</html>
