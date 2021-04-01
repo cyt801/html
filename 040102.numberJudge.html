@@ -8,8 +8,7 @@
 		<div id="app">
 			你输入的数：<input type="text" v-model="number" />
 			<p v-if="number%2==0">这个数为偶数</p>
-			<p v-if="number%2>0">这个数为奇数</p>
-			<p v-if="number%2<0">这个数为奇数</p>
+			<p v-if="number%2>0 || number%2<0">这个数为奇数</p>
 			
 		</div>
 		<script src="vue.js" type="text/javascript" charset="UTF-8"></script>
