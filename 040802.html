@@ -7,7 +7,7 @@
 	<body>
 		<div id="app">
 			{{chooseUser}}
-			<input type="button" @click="rdm=Math.ceil(Math.random()*10+1)%5;chooseUser=users[rdm]" />
+			<input type="button" value="请抽取幸运观众" @click="rdm=Math.ceil(Math.random()*10+1)%5;chooseUser=users[rdm]" />
 			<div v-for="user in users">
 			</div>
 		</div>
