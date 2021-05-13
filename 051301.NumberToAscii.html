@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="vue.js" type="text/javascript" charset="UTF-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="date" @keydown.enter="show()" />
+		</div>
+		<script type="text/javascript">
+			let v=new Vue({
+				el:"#app",
+				data:{
+					date:""
+				},
+				methods:{
+					show(){
+						alert(v.date.charCodeAt());
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
